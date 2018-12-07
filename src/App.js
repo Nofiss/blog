@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import './css/App.css';
-import Home from './components/Home'
-import Posts from './components/Posts.js'
+import Home from './components/Home';
+import Posts from './components/Posts.js';
+import User  from './components/User.js';
 import {
   Collapse,
   Navbar,
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem
+  NavItem,
+  NavLink
 } from 'reactstrap';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
@@ -38,7 +40,10 @@ class App extends Component {
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <Link to="/posts" className="link">Posts</Link>
+                  <NavLink tag={Link} to="/posts" className="link">Posts</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink tag={Link} to="/user" className="link">User</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>
@@ -46,6 +51,7 @@ class App extends Component {
 
           <Route path="/" component={Home} exact />
           <Route path="/posts" component={Posts} />
+          <Route path="/user" component={User} />
         </div>
       </Router>
     );
