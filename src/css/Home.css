@@ -1,0 +1,13 @@
+.titleHome {
+    text-align: center;
+    margin: 5% 0 5% 0;
+    font-size: 70px;
+    font-weight: bold; 
+}
+
+.imgHome {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

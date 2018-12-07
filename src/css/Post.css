@@ -1,0 +1,35 @@
+.posts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.post {
+    border: 2px solid black;
+    border-radius: 100px;
+    text-align: center;
+    margin: 5% 5% 0 5%;
+}
+
+.user {
+    font-weight: bold;
+    color: red;
+    font-size: 40px;
+    padding: 2% 0 1% 0;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 2%;
+}
+
+.bodyPost {
+    font-size: 20px;
+    padding: 1% 5% 0 5%;
+}
+
+.commenti {
+    margin: 3% 0 1% 0;
+    width: 80%;
+}

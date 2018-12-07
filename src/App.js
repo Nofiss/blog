@@ -1,26 +1,53 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
+import Home from './components/Home'
+import Posts from './components/Posts.js'
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem
+} from 'reactstrap';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false
+    };
+  }
+
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div className="App">
+          <Navbar color="dark" dark expand="md">
+            <NavbarBrand href="/">Blog</NavbarBrand>
+            <NavbarToggler onClick={this.toggle} />
+            <Collapse isOpen={this.state.isOpen} navbar>
+              <Nav className="ml-auto" navbar>
+                <NavItem>
+                  <Link to="/posts" className="link">Posts</Link>
+                </NavItem>
+              </Nav>
+            </Collapse>
+          </Navbar>
+
+          <Route path="/" component={Home} exact />
+          <Route path="/posts" component={Posts} />
+        </div>
+      </Router>
     );
   }
 }
