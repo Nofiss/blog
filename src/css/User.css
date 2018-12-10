@@ -1,0 +1,26 @@
+.users {
+    text-align: center;
+    margin: 5% 0 0 0;
+}
+
+.id {
+    font-size: 35px;
+}
+
+.name {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 1% 0 1% 0;
+}
+
+.username {
+    margin: 1% 0 0 0;
+}
+
+.phone {
+    margin: 1% 0 0 0; 
+}
+
+.city {
+    margin: 1% 0 0 0; 
+}
