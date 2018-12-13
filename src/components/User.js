@@ -13,7 +13,8 @@ class User extends Component {
     }
 
     posts = () => {
-        fetch("https://jsonplaceholder.typicode.com/users/" + this.props.id)
+        console.log(this.props.match)
+        fetch("https://jsonplaceholder.typicode.com/users/" + this.props.match.params.id)
             .then((response) => {
                 return response.json()
             })

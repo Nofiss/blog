@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './css/App.css';
 import Home from './components/Home';
 import Posts from './components/Posts.js';
-import Users  from './components/Users.js';
+import User from './components/User.js'
 import {
   Collapse,
   Navbar,
@@ -43,7 +43,7 @@ class App extends Component {
                   <NavLink tag={Link} to="/posts" className="link">Posts</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} to="/users" className="link">Users</NavLink>
+                  <NavLink tag={Link} to="/users/1" className="link">Users</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>
@@ -51,7 +51,7 @@ class App extends Component {
 
           <Route path="/" component={Home} exact />
           <Route path="/posts" component={Posts} />
-          <Route path="/users" component={Users} />
+          <Route path="/users/:id" component={User} />
         </div>
       </Router>
     );
