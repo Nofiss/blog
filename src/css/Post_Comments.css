@@ -10,5 +10,9 @@
 
 .commentName {
     font-weight: bold;
+    font-size: 25px;
+}
+
+.commentBody {
     font-size: 20px;
 }
