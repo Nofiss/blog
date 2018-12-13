@@ -1,0 +1,14 @@
+.comment {
+    text-align: center;
+}
+
+.commentEmail {
+    font-size: 30px;
+    color: red;
+    padding-top: 3%;
+}
+
+.commentName {
+    font-weight: bold;
+    font-size: 20px;
+}

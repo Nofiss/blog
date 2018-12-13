@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './css/App.css';
 import Home from './components/Home';
 import Posts from './components/Posts.js';
-import User from './components/User.js'
+import User from './components/User.js';
+import Post_Comments from './components/Post_Comments.js';
 import {
   Collapse,
   Navbar,
@@ -45,6 +46,9 @@ class App extends Component {
                 <NavItem>
                   <NavLink tag={Link} to="/users/1" className="link">Users</NavLink>
                 </NavItem>
+                <NavItem>
+                  <NavLink tag={Link} to="/post_comments/1" className="link">Single Post</NavLink>
+                </NavItem>
               </Nav>
             </Collapse>
           </Navbar>
@@ -52,6 +56,7 @@ class App extends Component {
           <Route path="/" component={Home} exact />
           <Route path="/posts" component={Posts} />
           <Route path="/users/:id" component={User} />
+          <Route path="/post_comments/:id" component={Post_Comments} />
         </div>
       </Router>
     );
