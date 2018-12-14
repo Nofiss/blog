@@ -10,6 +10,9 @@ class Post_Comments extends Component {
             posts: [],
             comments: []
         }
+    }
+
+    componentDidMount = () => {
         this.posts()
         this.comments()
     }

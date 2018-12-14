@@ -9,6 +9,9 @@ class User extends Component {
             users: [],
             city: ""
         }
+    }
+
+    componentDidMount = () => {
         this.posts()
     }
 

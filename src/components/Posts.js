@@ -8,6 +8,9 @@ class Posts extends Component {
         this.state = {
             posts: []
         }
+    }
+
+    componentDidMount = () => {
         this.posts()
     }
 
